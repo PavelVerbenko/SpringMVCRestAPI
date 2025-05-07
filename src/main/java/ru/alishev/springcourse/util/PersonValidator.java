@@ -10,6 +10,7 @@ import ru.alishev.springcourse.models.Person;
 
 @Component
 public class PersonValidator implements Validator {
+
     private final PersonDAO personDAO;
 
     @Autowired
@@ -26,8 +27,7 @@ public class PersonValidator implements Validator {
     public void validate(Object o, Errors errors) {
         Person person = (Person) o;
 
-        if (personDAO.show(person.getEmail()).isPresent()) {
-            errors.rejectValue("email", "", "This email is already taken");
-        }
+        if (personDAO.getPersonByFullName(person.getFullName()).isPresent())
+            errors.rejectValue("fullName", "", "Человек с таким ФИО уже существует");
     }
 }
