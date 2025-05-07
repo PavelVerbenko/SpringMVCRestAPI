@@ -4,7 +4,7 @@
 
 - Реализация базовых операций: создание, чтение, обновление, удаление записей в PostgreSQL.
 
-СТЭК: Java, Spring MVC, Spring JDBC, Thymeleaf, HTML, PostgreSQL, Hibernate Validator.
+СТЭК: Java, Spring MVC, Spring JDBC, Thymeleaf, HTML, PostgreSQL.
 
 
 | Класс                   | Описание                                                                                                                 |
